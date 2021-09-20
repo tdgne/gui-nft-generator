@@ -1,0 +1,46 @@
+{
+  "name": "test",
+  "layers": [
+    {
+      "id": "Layer 1",
+      "variants": [
+        {
+          "type": "image-file",
+          "params": {},
+          "id": "1.png"
+        },
+        {
+          "type": "image-file",
+          "params": {},
+          "id": "2.png"
+        },
+        {
+          "type": "image-file",
+          "params": {},
+          "id": "3.png"
+        }
+      ]
+    },
+    {
+      "id": "Layer 2",
+      "variants": [
+        {
+          "type": "image-file",
+          "params": {},
+          "id": "1.png"
+        },
+        {
+          "type": "dummy",
+          "params": {},
+          "id": "bfb10395-554d-4331-9664-43bdbf23de10"
+        },
+        {
+          "type": "dummy",
+          "params": {},
+          "id": "cc1f84df-b820-4d81-86c0-0ec17a1dc7de"
+        }
+      ]
+    }
+  ],
+  "layerNameCount": 2
+}

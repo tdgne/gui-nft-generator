@@ -7,15 +7,18 @@ import {
 
 export const CollectionContext = React.createContext<CollectionState>({});
 
-export const CollectionUpdateContext =
-  React.createContext<Dispatch<CollectionAction> | undefined>(undefined);
+export const CollectionUpdateContext = React.createContext<
+  Dispatch<CollectionAction> | undefined
+>(undefined);
 
 export const CollectionContextProvider = ({
   children,
+  initialState,
 }: {
   children: ReactChild;
+  initialState?: CollectionState;
 }) => {
-  const [state, dispatch] = useReducer(CollectionReducer, {});
+  const [state, dispatch] = useReducer(CollectionReducer, initialState ?? {});
 
   return (
     <CollectionUpdateContext.Provider value={dispatch}>
@@ -25,6 +28,8 @@ export const CollectionContextProvider = ({
     </CollectionUpdateContext.Provider>
   );
 };
+
+CollectionContextProvider.defaultProps = { initialState: {} };
 
 export function useCollectionEditorState() {
   const state = useContext(CollectionContext);

@@ -39,11 +39,7 @@ interface EditCollectionLocationState {
   collection: Collection;
 }
 
-export function CollectionEditor({
-  initialState,
-}: {
-  initialState: CollectionState;
-}) {
+function CollectionEditor({ initialState }: { initialState: CollectionState }) {
   const [isInitialRender, setInitialRender] = useState(true);
   const state = useCollectionEditorState();
   const dispatch = useCollectionEditorDispatch();
