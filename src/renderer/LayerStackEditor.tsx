@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Layer from 'types/Layer';
-import DummyVariant from 'types/DummyVariant';
-import ImageFileVariant from 'types/ImageFileVariant';
 import styled from 'styled-components';
+import DummyVariant from '../types/DummyVariant';
+import ImageFileVariant from '../types/ImageFileVariant';
+import Layer from '../types/Layer';
 import * as ipc from './ipc';
 import {
   useCollectionEditorDispatch,
